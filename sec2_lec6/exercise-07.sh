@@ -1,7 +1,5 @@
 #!/bin/bash
-
-read -p "Please enter the name of the file or directory: " FILE_NAME
-
+FILE_NAME=$1
 if [ -f "$FILE_NAME" ]
 then
     echo "This is a regular file."
@@ -11,5 +9,4 @@ then
 else
     echo "This is another type of file."
 fi
-
 ls -l "$FILE_NAME"
